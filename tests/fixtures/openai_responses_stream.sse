@@ -1,0 +1,18 @@
+event: response.created
+data: {"type":"response.created","response":{"id":"resp_test","model":"test-model","status":"in_progress"}}
+
+event: response.output_item.added
+data: {"type":"response.output_item.added","output_index":0,"item":{"type":"message","role":"assistant","content":[]}}
+
+event: response.output_text.delta
+data: {"type":"response.output_text.delta","output_index":0,"content_index":0,"delta":"Hi"}
+
+event: response.output_text.delta
+data: {"type":"response.output_text.delta","output_index":0,"content_index":0,"delta":" there"}
+
+event: response.function_call_arguments.delta
+data: {"type":"response.function_call_arguments.delta","output_index":1,"delta":"{\"cmd\":\"ls\"}"}
+
+event: response.completed
+data: {"type":"response.completed","response":{"id":"resp_test","model":"test-model","status":"completed","usage":{"input_tokens":1500,"input_tokens_details":{"cached_tokens":1200},"output_tokens":21,"output_tokens_details":{"reasoning_tokens":5},"total_tokens":1521}}}
+
